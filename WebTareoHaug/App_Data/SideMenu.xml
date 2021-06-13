@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  <group Text="Procesos">
+    <item Text="Administradores" NavigateUrl="Tareador.aspx" />
+    <item Text="Personal disponible" NavigateUrl="Personal.aspx" />
+    <item Text="Procesar asistencia" NavigateUrl="ProcesarTareoPersonal.aspx" />
+    <item Text="Asistencia de personal" NavigateUrl="ReporteTareo.aspx" />
+    <item Text="Listado de asistencia" NavigateUrl="ReporteTareoProcesado.aspx" />
+    <item Text="Tareo Personal" NavigateUrl="PeriodoPorRegimen.aspx" />
+  </group>
+  <group Text="Reportes">
+    <item Text="Listado de administradores" NavigateUrl="#" />
+    <item Text="Listado de personal" NavigateUrl="#" />
+    <item Text="Listado de tareo" NavigateUrl="#" />
+  </group>
+  <group Text="Configuración">
+    <item Text="Configuración del sistema" NavigateUrl="Configuracion.aspx" />    
+  </group>
+</menu>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<datos>
+  <data>
+		<conexion>server=10.100.1.253;database=RECURSOS_HUMANOS;uid=UsrWebTareo;pwd=z3l4y411;Connection Timeout=120</conexion>
+    <conexion_s10>server=200.16.78.241\SQL02,1435;database=S10;uid=sa;pwd=9Ljwd15VZpFJXIDSIGj6;Connection Timeout=120</conexion_s10>
+  </data>
+</datos>

@@ -1,0 +1,93 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Root.master.cs" Inherits="WebTareoHaug.RootMaster" %>
+
+<%-- DXCOMMENT: Page Root.master is a master page that contains the root layout (it includes Header, Cental Area, and Footer) --%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+</head>
+<body runat="server" id="Body">
+    <form id="form1" runat="server">
+        <dx:ASPxSplitter ID="ASPxSplitter1" runat="server" AllowResize="False" Orientation="Vertical"
+            FullscreenMode="True" SeparatorVisible="False" Height="100%" Width="100%" 
+            EnableHierarchyRecreation="false">
+            <Styles>
+                <Pane>
+                    <Paddings Padding="0px" />
+                    <border borderwidth="0px" />
+                </Pane>
+            </Styles>
+            <Panes>
+                <dx:SplitterPane Name="Header" AutoHeight="true">
+                    <PaneStyle CssClass="headerPane">
+                        <BorderBottom BorderWidth="1px" />
+                    </PaneStyle>
+                    <ContentCollection>
+                        <dx:SplitterContentControl ID="SplitterContentControl1" runat="server">
+                            <div class="headerTop">
+                                <div class="templateTitle">
+                                    <a id="TitleLink" href="~/" runat="server">Tareo Haug</a>
+                                </div>
+                                <div class="loginControl">
+                                    <a href="Login.aspx" runat="server" id="UsuarioLink">
+                                        <dx:ASPxLabel ID="AlblUsuario" runat="server" Text=""></dx:ASPxLabel>
+                                    </a>
+                                    |
+                                    <a href="Sucursal.aspx" runat="server" id="SucursalLink">
+                                        <dx:ASPxLabel ID="AlblSucursal" runat="server" Text="Sucursal"></dx:ASPxLabel>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="headerMenu">
+
+                                <dx:ASPxMenu ID="ASPxMenu1" runat="server" ItemAutoWidth="False" Width="100%"
+                                    DataSourceID="XmlDataSourceHeader">
+                                    <Border BorderWidth="0px" />
+                                    <BorderTop BorderWidth="1px" />
+                                </dx:ASPxMenu>
+
+                            </div>
+                        </dx:SplitterContentControl>
+                    </ContentCollection>
+                </dx:SplitterPane>
+                <dx:SplitterPane Name="Content" MinSize="375px">
+                    <PaneStyle CssClass="mainContentPane">
+                        <BorderBottom BorderWidth="1px"></BorderBottom>
+                    </PaneStyle>
+                    <ContentCollection>
+                        <dx:SplitterContentControl ID="SplitterContentControl3" runat="server">
+                            <asp:ContentPlaceHolder ID="Content" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </dx:SplitterContentControl>
+                    </ContentCollection>
+                    <PaneStyle BackColor="white">
+                        <BorderBottom BorderWidth="1px" />
+                    </PaneStyle>
+                </dx:SplitterPane>
+
+                <dx:SplitterPane Name="Footer" Size="30px" PaneStyle-CssClass="footerPane">
+                    <PaneStyle CssClass="footerPane"></PaneStyle>
+                    <ContentCollection>
+                        <dx:SplitterContentControl ID="SplitterContentControl4" runat="server">
+                            <div class="footerMenu">
+                            </div>
+                            <div class="copyright">
+                                <dx:ASPxLabel ID="ASPxLabel2" runat="server">
+                                </dx:ASPxLabel>
+                            </div>
+                        </dx:SplitterContentControl>
+                    </ContentCollection>
+                </dx:SplitterPane>
+            </Panes>
+        </dx:ASPxSplitter>
+
+
+        <asp:XmlDataSource ID="XmlDataSourceHeader" runat="server" DataFile="~/App_Data/TopMenu.xml"
+            XPath="/items/*"></asp:XmlDataSource>
+
+
+    </form>
+</body>
+</html>
